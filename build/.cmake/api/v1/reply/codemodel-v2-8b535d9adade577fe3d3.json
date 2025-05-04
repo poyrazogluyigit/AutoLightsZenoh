@@ -1,0 +1,112 @@
+{
+	"configurations" : 
+	[
+		{
+			"directories" : 
+			[
+				{
+					"build" : ".",
+					"childIndexes" : 
+					[
+						1
+					],
+					"jsonFile" : "directory-.-Debug-f5ebdc15457944623624.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"projectIndex" : 0,
+					"source" : ".",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				},
+				{
+					"build" : "protobuf",
+					"jsonFile" : "directory-protobuf-Debug-010d4dc06de9526e5a40.json",
+					"minimumCMakeVersion" : 
+					{
+						"string" : "3.5"
+					},
+					"parentIndex" : 0,
+					"projectIndex" : 0,
+					"source" : "protobuf"
+				}
+			],
+			"name" : "Debug",
+			"projects" : 
+			[
+				{
+					"directoryIndexes" : 
+					[
+						0,
+						1
+					],
+					"name" : "AutoLightsZenoh",
+					"targetIndexes" : 
+					[
+						0,
+						1,
+						2,
+						3,
+						4
+					]
+				}
+			],
+			"targets" : 
+			[
+				{
+					"directoryIndex" : 0,
+					"id" : "Config::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Config-Debug-c56ea016c2668cd777e5.json",
+					"name" : "Config",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "FrontCamera::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-FrontCamera-Debug-0c12b461f49ebed2477e.json",
+					"name" : "FrontCamera",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "HighBeams::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-HighBeams-Debug-02d0e88c391f8042fdca.json",
+					"name" : "HighBeams",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "LightSensor::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-LightSensor-Debug-6368aaeae898f3500549.json",
+					"name" : "LightSensor",
+					"projectIndex" : 0
+				},
+				{
+					"directoryIndex" : 0,
+					"id" : "Timer::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-Timer-Debug-172849e4411730a59767.json",
+					"name" : "Timer",
+					"projectIndex" : 0
+				}
+			]
+		}
+	],
+	"kind" : "codemodel",
+	"paths" : 
+	{
+		"build" : "/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh/build",
+		"source" : "/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh"
+	},
+	"version" : 
+	{
+		"major" : 2,
+		"minor" : 6
+	}
+}
