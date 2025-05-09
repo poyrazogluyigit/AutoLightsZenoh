@@ -14,20 +14,18 @@ int main(){
     auto session = zenoh::Session::open(std::move(config));
     auto timerSession = session.declare_publisher("autoLights/frontCamera");
 
-    int ctr = 0;
-    int passedCtr = 0;
-    bool carsExist = false;
+    std::this_thread::sleep_for(50s);
+    timerSession.put("Car detected");
+    std::cout << "Car detected" << std::endl;
+
+
     while(true) {
-        std::this_thread::sleep_for(100ms);
-        ctr = (ctr + 1) % 50; 
-        passedCtr = (passedCtr + 1) % 50;
-        if (ctr == 0) {
-            timerSession.put("Car detected");
-            carsExist = true;
-        }
-        if (carsExist && passedCtr == 20) timerSession.put("Car passed");
-
-
+        std::this_thread::sleep_for(30s);
+        // timerSession.put("Car detected");
+        // std::cout << "Car detected" << std::endl;
+        // std::this_thread::sleep_for(5s);
+        // timerSession.put("Car passed");
+        // std::cout << "Car passed" << std::endl;
     }
     return 0;
 }

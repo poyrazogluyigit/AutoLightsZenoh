@@ -6,7 +6,7 @@ using namespace std::chrono_literals;
 
 int main(){
 
-    int timerDelay = 100;
+    int timerDelay = 2000;
 
     zenoh::Config config = zenoh::Config::create_default();
     auto session = zenoh::Session::open(std::move(config));

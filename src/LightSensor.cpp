@@ -5,7 +5,7 @@
 
 using namespace std::chrono_literals;
 
-int highLight = 0;
+bool highLight = false;
 
 int main(){
 
@@ -13,14 +13,17 @@ int main(){
     auto session = zenoh::Session::open(std::move(config));
     auto lightSensorSession = session.declare_publisher("autoLights/lightSensor");
 
-    int ctr = 0;
+    std::this_thread::sleep_for(20s);
+    lightSensorSession.put("Low light");
+    std::cout << "Low light" << std::endl;
+
     while(true) {
-        std::this_thread::sleep_for(100ms);
-        ctr = (ctr + 1) % 100; 
-        if (ctr == 0) highLight = 0;
-        highLight ? lightSensorSession.put("Low light") 
-                    : lightSensorSession.put("High light");
+        std::this_thread::sleep_for(20s);
+        // lightSensorSession.put("Low light");
+        // std::cout << "Low light" << std::endl;
+        // std::this_thread::sleep_for(20s);
+        // lightSensorSession.put("High light") ;
+        // std::cout << "High light" << std::endl;
     }
-    
     return 0;
 }

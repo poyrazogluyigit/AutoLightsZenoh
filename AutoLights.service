@@ -1,0 +1,8 @@
+[Unit]
+Description=AutoLights executable starter
+DefaultDependencies=no
+
+[Service]
+ExecStart=/home/yigit/Desktop/dezyne-ornek/
+
+[Install]

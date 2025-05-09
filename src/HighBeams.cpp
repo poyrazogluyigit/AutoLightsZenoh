@@ -6,14 +6,15 @@ using namespace std::chrono_literals;
 
 int main(){
 
-    bool highBeams = 0;
+    bool highBeams = false;
 
     zenoh::Config config = zenoh::Config::create_default();
     auto session = zenoh::Session::open(std::move(config));
 
-    auto callback = [&highBeams](zenoh::Sample &sample) {
-        std::cout << "High beams toggled " << (0 ? "off" : "on") << std::endl;
-        highBeams = !highBeams;
+    auto callback = [&](zenoh::Sample &sample) {
+        std::cout << "High beams " << sample.get_payload().as_string() << std::endl;
+        highBeams = sample.get_payload().as_string() == "turn on";
+        session.put("autoLights/highBeams/reply", highBeams ? "on" : "off");
     };
 
     auto highBeamsSession = session.declare_subscriber("autoLights/highBeams", callback, zenoh::closures::none);
