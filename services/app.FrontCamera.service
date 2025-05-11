@@ -1,0 +1,10 @@
+[Unit]
+Description=AutoLights FrontCamera executable starter
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh/build/FrontCamera
+
+[Unit]
+PartOf=app.service

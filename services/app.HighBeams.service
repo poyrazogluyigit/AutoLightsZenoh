@@ -1,0 +1,10 @@
+[Unit]
+Description=AutoLights HighBeams executable starter
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh/build/HighBeams
+
+[Unit]
+PartOf=app.service

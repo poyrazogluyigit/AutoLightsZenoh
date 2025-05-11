@@ -1,0 +1,13 @@
+[Unit]
+Description=AutoLights executable starter
+DefaultDependencies=no
+
+[Service]
+ExecStart=/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh/build/ModeSelector
+
+[Unit]
+Wants=app.Config.service
+Wants=app.FrontCamera.service
+Wants=app.HighBeams.service
+Wants=app.LightSensor.service
+Wants=app.Timer.service

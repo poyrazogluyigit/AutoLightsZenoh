@@ -1,0 +1,10 @@
+[Unit]
+Description=AutoLights Config executable starter
+DefaultDependencies=no
+
+[Service]
+Type=simple
+ExecStart=/home/yigit/Desktop/dezyne-ornek/AutoLightsZenoh/build/Config
+
+[Unit]
+PartOf=app.service
